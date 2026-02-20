@@ -1,0 +1,13 @@
+@use "../util/" as u;
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.title {
+  font-size: u.rem(18);
+  font-weight: 700;
+}

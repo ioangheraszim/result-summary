@@ -4,9 +4,9 @@ import Summary from "./components/Summary";
 function App() {
   return (
     <>
-      <main className="container">
-        <Summary />
+      <main className="container card">
         <Result />
+        <Summary />
       </main>
     </>
   );

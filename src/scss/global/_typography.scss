@@ -1,0 +1,14 @@
+@use "../util/" as u;
+
+@font-face {
+  font-family: "Hanken Grotesk";
+  src: url("../assets/fonts/HankenGrotesk-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+:root {
+  // Font family
+  --hanken-grotesk: "Hanken Grotesk";
+}

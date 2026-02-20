@@ -1,22 +1,35 @@
 import { useState, useEffect } from "react";
-import "data.json";
 import Button from "./Button";
+import SummaryItem from "./SummaryItem";
 
 export default function Summary() {
-  const [summary, setSummary] = useState(null);
+  const [summary, setSummary] = useState([]);
 
-  useEffect(() => {});
+  useEffect(() => {
+    const loadData = async () => {
+      try {
+        const res = await fetch("../../data.json");
+        const data = await res.json();
+        setSummary(data);
+      } catch (err) {
+        console.error(err);
+      }
+    };
+    loadData();
+  }, []);
+
   return (
     <section className="summary">
       <h2 className="title summary__title">Summary</h2>
-      <div className="summary__score-wrap">
-        <img className="summary__icon" src="" alt="" />
-        <p className="summary__name">Reaction</p>
-        <p className="summary__score">
-          <span className="summary__score--bold">80</span> / 100
-        </p>
-      </div>
-      <Button />
+      {summary.map((smr) => (
+        <SummaryItem
+          key={smr.category}
+          icon={smr.icon}
+          category={smr.category}
+          score={smr.score}
+        />
+      ))}
+      <Button name="Continue" className="btn btn__continue" />
     </section>
   );
 }

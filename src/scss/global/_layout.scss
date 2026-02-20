@@ -1,0 +1,11 @@
+@use "../util/" as u;
+
+.container {
+  width: min(100% - u.rem(24), u.rem(375));
+  margin-inline: auto;
+
+  @include u.breakpoint(desktop) {
+    width: min(100%, u.rem(1440));
+    padding-inline: u.rem(32);
+  }
+}

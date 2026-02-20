@@ -1,2 +1,14 @@
+@use "../util/" as u;
 .btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn__continue {
+  width: 100%;
+  color: #{hsl(var(--white))};
+  background-color: #{hsl(var(--dark-gray-blue))};
+  padding: u.rem(14);
+  border-radius: u.rem(24);
 }

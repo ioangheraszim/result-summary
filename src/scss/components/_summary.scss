@@ -1,0 +1,68 @@
+@use "../util/" as u;
+
+.summary {
+  width: 100%;
+  padding: u.rem(20) u.rem(32);
+
+  &__title {
+    text-align: left;
+  }
+
+  &__score-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: u.rem(8) u.rem(16);
+    margin: u.rem(28) 0;
+    border-radius: u.rem(5);
+  }
+
+  &__name-wrap {
+    display: flex;
+  }
+
+  &__name {
+    padding: 0 u.rem(10);
+  }
+
+  &__name--reaction {
+    color: #{hsl(var(--light-red))};
+  }
+
+  &__name--memory {
+    color: #{hsl(var(--orange-yellow))};
+  }
+
+  &__name--verbal {
+    color: #{hsl(var(--green-teal))};
+  }
+
+  &__name--visual {
+    color: #{hsl(var(--cobalt-blue))};
+  }
+
+  &__score {
+    font-weight: 700;
+    color: #{hsl(var(--dark-gray-blue), 70%)};
+  }
+
+  &__score--bold {
+    color: #{hsl(var(--dark-gray-blue))};
+  }
+}
+
+.summary-reaction {
+  background-color: #{hsla(var(--light-red), 25%)};
+}
+
+.summary-memory {
+  background-color: #{hsla(var(--orange-yellow), 25%)};
+}
+
+.summary-verbal {
+  background-color: #{hsla(var(--green-teal), 25%)};
+}
+
+.summary-visual {
+  background-color: #{hsla(var(--cobalt-blue), 25%)};
+}

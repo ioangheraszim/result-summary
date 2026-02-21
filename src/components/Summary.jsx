@@ -8,7 +8,7 @@ export default function Summary() {
   useEffect(() => {
     const loadData = async () => {
       try {
-        const res = await fetch("../../data.json");
+        const res = await fetch("/data.json");
         const data = await res.json();
         setSummary(data);
       } catch (err) {
@@ -19,16 +19,23 @@ export default function Summary() {
   }, []);
 
   return (
-    <section className="summary">
-      <h2 className="title summary__title">Summary</h2>
-      {summary.map((smr) => (
-        <SummaryItem
-          key={smr.category}
-          icon={smr.icon}
-          category={smr.category}
-          score={smr.score}
-        />
-      ))}
+    <section className="summary" aria-labelledby="summary-title">
+      <h2 id="summary-title" className="title summary__title">
+        Summary
+      </h2>
+
+      <ul>
+        {summary.map((smr) => (
+          <li key={smr.category}>
+            <SummaryItem
+              icon={smr.icon}
+              category={smr.category}
+              score={smr.score}
+            />
+          </li>
+        ))}
+      </ul>
+
       <Button name="Continue" className="btn btn__continue" />
     </section>
   );

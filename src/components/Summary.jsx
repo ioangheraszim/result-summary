@@ -8,7 +8,7 @@ export default function Summary() {
   useEffect(() => {
     const loadData = async () => {
       try {
-        const res = await fetch("/data.json");
+        const res = await fetch("./data.json");
         const data = await res.json();
         setSummary(data);
       } catch (err) {

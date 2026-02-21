@@ -6,6 +6,6 @@
 
   @include u.breakpoint(desktop) {
     width: min(100%, u.rem(1440));
-    padding-inline: u.rem(32);
+    padding-inline: u.rem(0);
   }
 }

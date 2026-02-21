@@ -21,7 +21,11 @@ body {
   -webkit-font-smoothing: antialiased;
   font-family: "Hanken Grotesk", sans-serif;
   font-size: u.rem(18);
-  background-color: var(--persian-blue);
+  background-color: #{hsl(var(--pale-blue))};
+
+  display: grid;
+  align-content: center;
+  height: 100vh;
 }
 
 img,

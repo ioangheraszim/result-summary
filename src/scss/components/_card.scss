@@ -1,13 +1,18 @@
 @use "../util/" as u;
 
 .card {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  background-color: #{hsl(var(--white))};
+  border-radius: u.rem(32);
+  @include u.breakpoint(desktop) {
+    display: flex;
+    max-width: 740px;
+  }
 }
 
 .title {
-  font-size: u.rem(18);
   font-weight: 700;
+
+  @include u.breakpoint(desktop) {
+    font-size: u.rem(24);
+  }
 }

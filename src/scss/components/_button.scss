@@ -12,3 +12,11 @@
   padding: u.rem(14);
   border-radius: u.rem(24);
 }
+
+.btn__continue:hover {
+  background: linear-gradient(
+    180deg,
+    #{hsl(var(--light-slate-blue))},
+    #{hsl(var(--light-royal-blue))}
+  );
+}

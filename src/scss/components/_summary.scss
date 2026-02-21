@@ -3,6 +3,13 @@
 .summary {
   width: 100%;
   padding: u.rem(20) u.rem(32);
+  background-color: var(--white);
+
+  @include u.breakpoint(desktop) {
+    width: 50%;
+    margin: auto u.rem(15);
+    padding: u.rem(30);
+  }
 
   &__title {
     text-align: left;
@@ -19,10 +26,12 @@
 
   &__name-wrap {
     display: flex;
+    padding: u.rem(5) u.rem(14);
   }
 
   &__name {
     padding: 0 u.rem(10);
+    font-weight: 500;
   }
 
   &__name--reaction {
@@ -52,17 +61,17 @@
 }
 
 .summary-reaction {
-  background-color: #{hsla(var(--light-red), 25%)};
+  background-color: #{hsla(var(--light-red), 15%)};
 }
 
 .summary-memory {
-  background-color: #{hsla(var(--orange-yellow), 25%)};
+  background-color: #{hsla(var(--orange-yellow), 15%)};
 }
 
 .summary-verbal {
-  background-color: #{hsla(var(--green-teal), 25%)};
+  background-color: #{hsla(var(--green-teal), 15%)};
 }
 
 .summary-visual {
-  background-color: #{hsla(var(--cobalt-blue), 25%)};
+  background-color: #{hsla(var(--cobalt-blue), 15%)};
 }
